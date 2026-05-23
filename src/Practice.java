@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class Practice {
     static Scanner scanner=new Scanner(System.in);
     public static void main(String[] args) {
-        Practice.reverseArray();
+        Practice.handCricket();
     }
     public static void reversString(String word){
         System.out.println("Input : "+word);
@@ -144,9 +144,9 @@ public class Practice {
             while (!out) {
                 System.out.println("-----------------------------------------");
                 System.out.println("Current Team Score : "+teamScore);
+                int rand= score[random.nextInt(6)];
                 System.out.print("Hit the Ball : ");
                 int hit = scanner.nextInt();
-                int rand= score[random.nextInt(6)];
                 System.out.println("Your hit : "+hit);
                 System.out.println("Opponent : "+rand);
                 if (hit==rand){
@@ -281,6 +281,27 @@ public static void reverseArray(){
         }
 
     System.out.println(list);
+}
+public static void longestCommonPrefix(){
+        String[]arr={"right","rice","rse"};
+        String prefix=arr[0];
+        for(int i=1;i<arr.length;i++){
+            while(arr[i].indexOf(prefix)!=0){
+                prefix=prefix.substring(0,prefix.length()-1);
+            }
+        }
+    System.out.println("Longest Common prefix : "+prefix);
+}
+public static void longestCommonSuffix(){
+    String[]arr={"higher","never","over"};
+    String suffix=arr[0];
+    for(int i=1;i<arr.length;i++){
+        while(!arr[i].endsWith(suffix)){
+
+            suffix=suffix.substring(1);
+        }
+    }
+    System.out.println("Longest Common suffix : "+suffix);
 }
 
 }

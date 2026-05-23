@@ -13,7 +13,7 @@ public class TicketBooking {
     }
     public static Booking confirmBook(User user,Bus foundBus){
         System.out.println("------------------------");
-            System.out.println("Booking Success ");
+            System.out.println("Booking Success");
            return new Booking(user.id,foundBus.busId,
                     user.name, foundBus.busName,
                     foundBus.from+ " -> "+foundBus.to);
@@ -28,7 +28,8 @@ public class TicketBooking {
         System.out.println("Bus Name : "+b.busName);
         System.out.println("Journey : "+b.fromTo);
         System.out.println();
-        System.out.println(" HAPPY JOURNEY ");
+        System.out.println(" HAPPY JOURNEY \uD83D\uDE0A");
+        System.out.println("------------------------");
     }
     public static User getUserDetails(){
         System.out.print("Enter id: ");
